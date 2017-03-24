@@ -1,0 +1,14 @@
+$black: #343441;
+$white: #FAFFF2;
+$whiteOpaque: rgba(250, 255, 242, 0.6);
+$grey: #D4CDC3;
+$highlight: #FFFB46;
+$highlight-2y: #01172D;
+$highlight-2b: #7199C4;
+$backgroundColor: $white;
+$mainColor: $black;
+$headingColor: $black;
+$linkColor: $highlight;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionColor: $black;
+$selectionBackgroundColor: lighten( $linkColor, 25% );

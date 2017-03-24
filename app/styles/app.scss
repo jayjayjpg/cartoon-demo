@@ -1,0 +1,300 @@
+// @import 'css/reveal.scss';
+@import 'css/colors';
+
+@import 'css/theme/source/dark';
+@import 'css/theme/template/theme';
+
+@import 'css/font-styles/Bangers/css/fonts';
+@import 'css/font-styles/Roboto/css/fonts';
+@import 'css/materialize-sass/materialize';
+
+$bubbleFont: 38px;
+$headingSizeSlide: 72px;
+$headingSizeMain: 84px;
+
+.body {
+  background-color: $black;
+  font-family: 'Roboto';
+  color: $white;
+}
+
+.reveal .controls .navigate-left {
+    left: 0;
+}
+
+.techs img, .techs p {
+  opacity: .5;
+  transition: transform .2s ease-in;
+}
+.reveal {
+.techs img {
+  max-width: none;
+  max-height: none;
+}
+
+.techs .pop-up img {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+}
+.reveal {
+  section {
+
+   h1, h2 {
+          
+     font-family: 'Bangers';
+     font-weight: 200;
+   }
+
+
+   p {
+     &.smaller-text {
+      font-size: 32px;
+      text-align: left;
+     }
+
+   }
+
+    &.js-libraries {
+      img, svg {
+        height: 5em !important;
+        width: auto !important;
+        max-width: none;
+        max-height: none;
+      }
+    }
+
+    img {
+       background-color: transparent;
+       border: none;
+       box-shadow: none;
+    }
+
+    .panel {
+      border: .4rem solid $mainColor;
+      box-shadow: .5rem .5rem .5rem lighten($black, 25%);
+      color: $mainColor;
+      background-color: $highlight;
+      margin: -2.5rem -2rem;
+      min-height: 14em;
+      padding: 2.5rem 2rem;
+      position: relative;
+
+      &.soft-panel {
+        border: .4rem solid lighten($mainColor, 50%);
+        background-color: $whiteOpaque;
+        box-shadow: none;
+      }
+
+      &.dotted {
+        background-image: url("../img/halftonedotted.jpg");
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+
+      &.start {
+
+        small { 
+           position: relative;
+           margin-top: 4rem;
+        }
+
+      }
+    
+     &.o-hidden {
+       overflow: hidden;
+       height: 14em;
+     }
+
+      h1, h2, h3, h4, h5, p {
+        color: $black;
+      }
+      h1, h2 {
+        font-size: $headingSizeMain;
+        font-family: 'Bangers';
+        font-weight: 200;
+      }
+
+      h2 {
+        font-size: $headingSizeSlide;
+      }
+      a, .link {
+        color: $highlight-2y;
+      }
+
+     .bubble {
+        display: block;
+        font-size: $bubbleFont;
+        border: .1em solid $black;
+        position: absolute;
+        padding: 1em .5em;
+        width: 8em;
+        height: 4em;
+        background-color: $white;
+        border-radius: 50% 50% 50% 50% / 50% 50% 60% 60%;
+        box-shadow: .1em .1em .1em lighten($black, 25%); 
+
+        &.smaller-text {
+          font-size: $bubbleFont - 8;
+
+        }
+      }
+
+
+.curvedarrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 9px solid red;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+.curvedarrow:after {
+  content: "";
+  position: absolute;
+  border: 0 solid transparent;
+  border-top: 3px solid red;
+  border-radius: 20px 0 0 0;
+  top: -12px;
+  left: -9px;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+    }
+  }
+}
+
+
+.reveal {
+  section {
+
+
+
+      .start, .yellow {
+
+        small {
+           position: relative;
+           margin-top: 4rem;
+        }
+
+        h1, h2, h3, h4, h5, p {
+          color: $black;
+        }
+
+        h1, h2 {
+          font-family: 'Bangers';
+          font-weight: 200;
+        }
+
+        a, .link {
+          color: $highlight-2y;
+        } 
+
+
+      }
+
+
+     .dark, &.dark {
+        h1, h2, h3, h4, h5, p {
+          color: $white;
+        }
+        a, .link {
+          color: $highlight-2b;
+        }
+     }
+
+    pre {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+
+      code {
+        background-color: transparent;
+        border: none;
+
+      }
+
+     &.giant {
+       font-size: $headingSizeSlide;
+       text-align: center;
+     }
+
+
+    }
+
+  }
+
+
+}
+
+.leadfeeder-logo {
+  fill: #fff;
+  width: 12em;
+  height: 4em;
+}
+
+.websurfin {
+  background-image: url('../img/90sinternet.gif');
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: contain;
+}
+
+@mixin panel-animation($frameNum, $url, $name) {
+  background-image: url($url);
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-size: auto $frameNum * 100%;
+  animation: $name $frameNum * 0.15s steps($frameNum) infinite;
+}
+
+.racoon-hero {
+  @include panel-animation(6, '../img/batguy-sprite.png', racoon-fly);
+}
+
+.html-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include panel-animation(3, '../img/flashonhill-sprite.png', hill);
+
+  &.html-hero-reveal {
+    @include panel-animation(3, '../img/flashonhill-sprite.png', hill-zoom);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+@keyframes racoon-fly {
+  to {
+   background-position: 0 600%;
+  }
+}
+
+@keyframes hill {
+  to {
+    background-position: 0 300%;
+  }
+}
+
+@keyframes hill-zoom {
+  to {
+    background-position: 0 300%;
+    transform: scale(2, 2) translate(-8em, 4em);
+  }
+}
