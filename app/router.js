@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('demo-canvas');
+  this.route('demo-waapi');
 });
 
 export default Router;

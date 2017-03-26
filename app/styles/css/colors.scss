@@ -5,10 +5,24 @@ $grey: #D4CDC3;
 $highlight: #FFFB46;
 $highlight-2y: #01172D;
 $highlight-2b: #7199C4;
-$backgroundColor: $white;
+$backgroundColor: $black;
 $mainColor: $black;
 $headingColor: $black;
 $linkColor: $highlight;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionColor: $black;
 $selectionBackgroundColor: lighten( $linkColor, 25% );
+
+
+.white-text {
+  color: $white;
+  background-color: transparent;
+}
+
+.black-text {
+  color: $black;
+}
+
+.yellow-text, .highlight-text {
+  color: $highlight;
+}

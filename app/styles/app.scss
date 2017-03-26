@@ -40,7 +40,7 @@ $headingSizeMain: 84px;
 .reveal {
   section {
 
-   h1, h2 {
+   h1, h2, p {
           
      font-family: 'Bangers';
      font-weight: 200;
@@ -71,11 +71,11 @@ $headingSizeMain: 84px;
     }
 
     .panel {
-      border: .4rem solid $mainColor;
-      box-shadow: .5rem .5rem .5rem lighten($black, 25%);
+      border: .4rem solid $highlight;
+      box-shadow: .5rem .5rem .5rem darken($black, 25%);
       color: $mainColor;
-      background-color: $highlight;
-      margin: -2.5rem -2rem;
+      background-color: $white;
+      margin: 2rem -2rem 1rem;
       min-height: 14em;
       padding: 2.5rem 2rem;
       position: relative;
@@ -276,6 +276,39 @@ $headingSizeMain: 84px;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+}
+
+.row {
+  .col.pull-right {
+    float: right;
+  }
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: relative;
+  left: auto;
+  opacity: 1;
+  width: 1em;
+  height: 1em;
+}
+
+button {
+  background-image: none;
+  background-color: $highlight;
+  box-shadow: none;
+  border-color: $highlight;
+  font-family: 'Bangers';
+  color: $black;
+  padding-left: .7em;
+  padding-right: .7em;
+
+  &:focus {
+    background-color: darken($highlight, 10%);
   }
 }
 
