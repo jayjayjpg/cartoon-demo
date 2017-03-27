@@ -23,12 +23,11 @@ export default Component.extend({
   }),
      
   keyFrameEffects: [],
-  keyFrameEffectsReady: computed('keyFramesEmpty','layerItemsLength', function(){
-    debugger;
-    if (this.get('keyFramesEmpty')) {
+  keyFrameEffectsReady: computed('keyFramesLength','layerItemsLength', function(){
+    /* if (this.get('keyFramesEmpty')) {
       throw "No keyframes loaded yet";
-    }
-    return this.get('keyFrameEffects').length === this.get('layerItemsLength');
+    } */
+    return this.get('keyFramesLength') === this.get('layerItemsLength');
   }),
   setup() {
     if (this.get('keyFrameEffectsReady')) {
@@ -67,8 +66,6 @@ export default Component.extend({
     },
 
     setKeyFrames(keyFrame) {
-      debugger;
-      console.log("set keyframes");
       const keyFrameEffects = this.get('keyFrameEffects');
       keyFrameEffects.pushObject(keyFrame);
       console.log(keyFrameEffects);
