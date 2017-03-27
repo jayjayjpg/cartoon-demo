@@ -1,0 +1,47 @@
+.comic-panel-layer {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-size: auto 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.demos {
+
+  .comic-panel, .comic-panel-canvas {
+    &.panel {
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.comic-panel {
+  height: 400px;
+  width: 800px;
+  position: relative;
+
+  .play-button {
+     position: relative;
+     right: 0;
+  }
+}
+
+.play-button {
+  position: absolute;
+  bottom: -1em;
+  right: -1em;
+  width: 30px;
+  height: 30px;
+  background-color: $highlight;
+}
+
+.pull-right {
+  float: right;
+}

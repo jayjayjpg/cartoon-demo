@@ -1,27 +1,23 @@
+<div class="comic-panel panel">
 {{#each layerItems as |layer|}}
-  {{!-- {{yield (hash content=(
-               component layer.layerType
-               classNames=layer.layerClass
-               bgImage=layer.layerImage
-               keyFrames=layer.layerKeys
-               options=layer.animationOptions
-               frameAction=(action "setKeyFrames")
-           )
-      )
-   }} --}}
   {{component layer.layerType
               classNames=layer.layerClass
               bgImage=layer.layerImage
               keyFrames=layer.layerKeys
+              frameNumber=layer.frameNumber
               options=layer.animationOptions
               frameAction=(action "setKeyFrames")
    }}
 {{/each}}
-{{#if isPlaying}}
-  <div class="play-button" {{action "pause"}}>pause</div>
-  <div class="play-button play-all" {{action "pauseAll"}}>All</div>
-{{else}}
-  <div class="play-button" {{action "play"}}>play</div>
-  <div class="play-button play-all" {{action "playAll"}}>All</div>
-{{/if}}
-  <div class="reverse-button" {{action "reverse"}}></div>
+</div>
+<div class="mt-1">
+  {{#if isPlaying}}
+    <button class="pull-right" {{action 'pause'}}>Pause</button>
+  {{else}}
+    <button class="pull-right" {{action 'play'}}>Play</button>
+  {{/if}}
+</div>
+<div class="white-text">
+keyFrames number {{keyFramesLength}}
+Keyframes ready {{keyFrameEffectsReady}}
+</div> 

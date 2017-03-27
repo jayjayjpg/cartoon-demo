@@ -1,8 +1,5 @@
-<h1>Web Animations API Demo + EmberJS</h1>
-<section class="row">
-  <div class="col 12">
-    {{comic-panel layerItems=layers}}
-    <p>HTML5 Canvas Demo "{{comic-panel}}"</p>
-  </div>
+<section class="row mt-1">
+  {{comic-panel layerItems=layers
+                isPlaying=isAnimationPlaying}}
 </section>
-{{outlet}}
+

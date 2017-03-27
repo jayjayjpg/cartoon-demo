@@ -4,8 +4,10 @@ import canvasDrawing from '../mixins/canvas-drawing';
 export default Ember.Component.extend(canvasDrawing, {
   tagName: 'canvas',
   isRunning: false,
-  frameNum: 0,
   currentLoop: null,
+  noRunningLoop: Ember.computed.empty('currentLoop'),
+  createNewLoop: Ember.computed.and('isRunning', 'noRunningLoop'),
+  frameNum: 0,
   totalNumOfFrames: 5,
   classNames: ['panel','comic-panel', 'comic-panel-canvas'],
   attributeBindings: ['canvasWidth:width', 'canvasHeight:height'],
@@ -14,7 +16,7 @@ export default Ember.Component.extend(canvasDrawing, {
   imgUrl: 'img/batguy-sprite.png',
   setup: Ember.observer('pseudoImg', 'isRunning', function() {
     this.draw();
-    if (this.get('isRunning') && Ember.isEmpty(this.get('currentLoop')) ) {
+    if (this.get('createNewLoop')) {
       this.loop();
     }
     else {
