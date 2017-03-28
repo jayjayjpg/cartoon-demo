@@ -13,7 +13,7 @@ export default Ember.Component.extend(canvasDrawing, {
   attributeBindings: ['canvasWidth:width', 'canvasHeight:height'],
   canvasWidth: 500,
   canvasHeight: 500,
-  imgUrl: 'img/batguy-sprite.png',
+  imgUrl: 'img/batguy-sprite-3.png',
   setup: Ember.observer('pseudoImg', 'isRunning', function() {
     this.draw();
     if (this.get('createNewLoop')) {
@@ -43,7 +43,7 @@ export default Ember.Component.extend(canvasDrawing, {
     const img = this.get('pseudoImg');
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     /* drawImage method signature: void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight); */
-    ctx.drawImage(img, sx, sy, sWidth, sHeight, 0, 0, dWidth, canvasHeight);
+    ctx.drawImage(img, sx, sy, sWidth, sHeight, 0, 0, sWidth - 100, canvasHeight);
   },
   loop() {
     this.draw();
@@ -59,5 +59,5 @@ export default Ember.Component.extend(canvasDrawing, {
          this.set('frameNum', 0);
       }
   }
-})
+});
 

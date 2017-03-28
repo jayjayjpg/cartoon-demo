@@ -12,7 +12,7 @@ export default Component.extend({
   frameNumber: 1,
   bgImageStyle: computed('bgImage', 'frameNumber', function() {
     return Ember.String.htmlSafe(`background-image: url(${this.get('bgImage')});
-                            background-size: auto ${this.get('frameNumber') * 100}%`);
+                              background-size: auto ${this.get('frameNumber') * 100}%`);
   }),
   createKeyFrames: Ember.on('didRender', function() {
     const keyFrames = this.get('keyFrames');

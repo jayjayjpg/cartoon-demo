@@ -24,9 +24,6 @@ export default Component.extend({
      
   keyFrameEffects: [],
   keyFrameEffectsReady: computed('keyFramesLength','layerItemsLength', function(){
-    /* if (this.get('keyFramesEmpty')) {
-      throw "No keyframes loaded yet";
-    } */
     return this.get('keyFramesLength') === this.get('layerItemsLength');
   }),
   setup() {
@@ -68,7 +65,6 @@ export default Component.extend({
     setKeyFrames(keyFrame) {
       const keyFrameEffects = this.get('keyFrameEffects');
       keyFrameEffects.pushObject(keyFrame);
-      console.log(keyFrameEffects);
     }
   }
 });

@@ -8,6 +8,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+
+  &.scaling-background {
+    background-size: 100% auto;
+  }
 }
 
 
@@ -26,6 +30,12 @@
   height: 400px;
   width: 800px;
   position: relative;
+  overflow: hidden;
+
+  &.comic-panel-canvas {
+    height: auto;
+    width: auto;
+  }
 
   .play-button {
      position: relative;

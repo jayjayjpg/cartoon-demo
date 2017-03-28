@@ -4,21 +4,29 @@ export default Ember.Controller.extend({
  layers: [
     {
       layerType: 'comic-panel-layer',
-      layerClass: 'moving-background',
-      layerImage: '/img/batguy-sprite.png',
+      layerClass: 'scaling-background',
+      layerImage: '/img/panorama-cut.png',
 
-      frameNumber: 6,
+      frameNumber: 1,
 
       layerKeys: [
-        { backgroundPosition: '0 0' },
-        { backgroundPosition: '0 120%' }
+        { backgroundPosition: '0 0', 
+          transform: 'scale(1.2, 1.2)', 
+          filter: 'blur(0px)', 
+          backgroundSize: '100% auto',
+          opacity: 1 },
+        { backgroundPosition: '0 bottom', 
+          transform: 'scale(1, 1)', 
+          filter: 'blur(2px) saturate(8)', 
+          backgroundSize: '100% auto',
+          opacity: 0.5 }
       ],
 
       animationOptions: {
-        duration: 1000,
-        fill: 'both',
-        easing: 'steps(6)',
-        iterations: Infinity
+        duration: 30000,
+        fill: 'forwards',
+        easing: 'linear',
+        iterations: 1
       }
      },
     {
