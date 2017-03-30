@@ -1,5 +1,9 @@
 <section class="row mt-1">
-  {{comic-panel-canvas frameNum=frameNumber totalNumOfFrames=5 isRunning=animationIsRunning}}
+  {{comic-panel-canvas 
+      frameNum=frameNumber 
+      totalNumOfFrames=totalNumOfFrames
+      isRunning=animationIsRunning
+  }}
   <div class="col s12 m3 pull-right mt-1">
     <p class="white-text">Frame {{frameNumber}}</p>
     <button {{action 'incrementFrame'}}>Frame +</button>

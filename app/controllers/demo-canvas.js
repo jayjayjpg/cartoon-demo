@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   frameNumber: 0,
-  isSmooth: true,
   animationIsRunning: false,
+  totalNumOfFrames: 5,
   actions: {
     incrementFrame() {
-      if (this.get('frameNumber') < 5) {
+      if (this.get('frameNumber') < this.get('totalNumOfFrames')) {
         this.incrementProperty('frameNumber');
       }
       else {
