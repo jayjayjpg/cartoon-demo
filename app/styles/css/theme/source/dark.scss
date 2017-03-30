@@ -11,13 +11,11 @@
 // ---------------------------------------------
 
 
-// Include theme-specific fonts
-@import url(../lib/font/source-sans-pro/source-sans-pro.css);
 
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: 'Roboto', sans-serif;
+$headingFont: 'Roboto', sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
