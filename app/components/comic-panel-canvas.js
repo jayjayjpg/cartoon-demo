@@ -32,7 +32,7 @@ export default Ember.Component.extend(canvasDrawing, {
     this.draw();
   }),
 
-  dWidth: Ember.computed('canvasHeight', 'naturalWidth', 'naturalHeight', 'totalNumOfFrames' function() {
+  dWidth: Ember.computed('canvasHeight', 'naturalWidth', 'naturalHeight', 'totalNumOfFrames', function() {
     return (this.get('canvasHeight') * this.get('naturalWidth')) * this.get('totalNumOfFrames') / this.get('naturalHeight');
   }),
 
