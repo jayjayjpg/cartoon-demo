@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     {
       layerType: 'comic-panel-layer',
       layerClass: 'scaling-background',
-      layerImage: '/img/panorama-cut.png',
+      layerImage: 'img/panorama-cut.png',
 
       frameNumber: 1,
 
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
      },
     {
       layerType: 'comic-panel-layer',
-      layerImage: '/img/kimwalks-cut-sprite.png',
+      layerImage: 'img/kimwalks-cut-sprite.png',
       layerClass: 'character',
 
       frameNumber: 8,
